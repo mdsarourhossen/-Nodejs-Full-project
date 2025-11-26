@@ -1,0 +1,173 @@
+*{
+
+  font-family: "Roboto", sans-serif;
+
+}
+.header{
+  width: 90%;
+  margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.Logoutbtn{
+
+background-color: blue;
+color: white;
+border: none;
+padding: 10px;
+  border-radius: 10px;
+
+
+}
+.Logoutbtn:hover{
+background-color:  blueviolet;
+transition: 1s;
+cursor: pointer;
+}
+
+#add-post-container{
+
+width: 90%;
+ margin: 20px auto;
+display: flex;
+justify-content:center;
+
+}
+#add-post-container article >h2{
+
+  color: blue;
+
+}
+#new-post-text{
+margin-bottom: 10px;
+ padding: 10px;
+}
+
+#new-post-image{
+ margin-bottom: 10px;
+ padding: 10px;
+ width: 90%;
+
+}
+.add-post-btn{
+padding: 10px;
+background-color: blue;
+color: white;
+border: none;
+border-radius: 10px;
+width: 60px;
+}
+.add-post-btn:hover{
+background-color:  blueviolet;
+transition: 1s;
+cursor: pointer;
+}
+
+#post-container{
+width:90%;
+background-color: rgb(244, 222, 225);
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.post{
+  padding: 15px; 
+  border: 1px solid black; 
+  border-radius: 10px;
+  width:50%;
+margin: 20px;
+}
+.post-header{
+    display: flex;
+ align-items: center;   
+ gap: 10px;
+ 
+}
+.post-user-iamge img{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+.post-user-name{
+    margin: 0;
+}
+.posted-time{
+    color: rgb(135, 135, 135);
+    font-size: 12px;
+}
+.post-image {
+       display: flex;
+    justify-content: center;
+}
+.post-image img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 15px;
+}
+.comment{
+   display: flex;
+    align-items: center;
+      gap:5px ;
+     margin-bottom: 10px; 
+
+}
+
+
+
+.comment-user-image img{
+
+width: 40px;
+height: 40px;
+border-radius:50%;
+}
+.comment-text-container{
+background-color: rgb(152, 211, 152);
+padding: 10px;
+border-radius: 10px;
+
+}
+.comment-text-container h4,p{
+margin: 0;
+}
+
+.comment-text-container h4{
+margin-bottom: 5px;
+}
+.postCommen-holder{
+   display: flex;
+   margin: 100px;
+}
+.postComment-input-field{
+padding: 10px;
+outline: none;
+border: 1px solid gray;
+width: 100%;
+
+
+}
+
+.post-comment-input-field-holder{
+width: 60%;
+
+}
+.postCommen-btn{
+padding: 10px;
+background-color: blue;
+color: white;
+border: none;
+border-radius: 10px;
+}
+.postComment-holder{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+flex-grow: 1;
+}
+
