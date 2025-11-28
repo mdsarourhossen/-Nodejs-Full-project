@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 /*app.get('/example',(req,res) =>{
-res.send({frist:'munna',age:30});
+res.send({frist:'munna',age:30}); add
 });*/
 // making connection with my sql server
 let db = mysql.createConnection({
