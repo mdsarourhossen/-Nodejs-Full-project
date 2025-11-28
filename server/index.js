@@ -111,6 +111,40 @@ res.send(result);
 });
 });
 
+// Post Delete API
+app.delete('/deletePost/:id', (req, res) => {
+    const postId = req.params.id;
+    
+    // sqlquary for post delete
+    const sql = "DELETE FROM posts WHERE postId = ?";
+    
+    db.query(sql, [postId], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error deleting post");
+        } else {
+            res.send("Post deleted successfully");
+        }
+    });
+});
+
+// Post Update API
+app.put('/updatePost', (req, res) => {
+    // New text accept for forntend 
+    const { postId, newText } = req.body; 
+
+    const sql = "UPDATE posts SET postText = ? WHERE postId = ?";
+    
+    db.query(sql, [newText, postId], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error updating post");
+        } else {
+            res.send("Post updated successfully");
+        }
+    });
+});
+
 
 
 
