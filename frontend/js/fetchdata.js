@@ -256,4 +256,3 @@ const editPost = async (postId, oldText) => {
 
 
   fetchAllPost();
-//all alowen
