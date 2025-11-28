@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require ('cors');
 const mysql = require('mysql2');
@@ -11,11 +12,11 @@ res.send({frist:'munna',age:30});
 });*/
 // making connection with my sql server
 let db = mysql.createConnection({
-  host     : 'mysql-8a7e6e2-smdsarourhossen-0d4d.g.aivencloud.com',
-  user     : 'avnadmin',
-  password : 'AVNS_u4ZQ1ZpWZ3Zv_2tpIm1',
-  database : 'defaultdb',
-      port: 23446,
+  host : process.env.DB_HOST,
+  user : process.env.DB_USER,
+  password :process.env. DB_PASS,
+  database :process.env.DB_NAME,
+      port: DB_PORT,
        ssl: {
            rejectUnauthorized:false}
 });

@@ -1,3 +1,4 @@
+
 const checkLoggedInUser = () => {
     let user = localStorage.getItem('loggedInUser');
     if (user) {
