@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require ('cors');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const port = 5000;
 const app = express();
 //middlewares
@@ -11,10 +11,13 @@ res.send({frist:'munna',age:30});
 });*/
 // making connection with my sql server
 let db = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'postbook2'
+  host     : 'mysql-8a7e6e2-smdsarourhossen-0d4d.g.aivencloud.com',
+  user     : 'avnadmin',
+  password : 'AVNS_u4ZQ1ZpWZ3Zv_2tpIm1',
+  database : 'defaultdb',
+      port: 23446,
+       ssl: {
+           rejectUnauthorized:false}
 });
 db.connect((err) =>{
 if(err){
@@ -95,11 +98,13 @@ res.send(result);
 
 app.post('/addNewPost',(req,res) =>{
 //destracture the req.body object
-const {postedUserId,postedTime,postText, postImageUrl} =req.body;
+const {postedUserId,postedTime,postText, postImageUrl} =req.body; 
+  const formattedTime = new Date(postedTime).toISOString().slice(0, 19).replace('T', ' ');
+
 // sqlquery
 //sql injection attack(=?)
 let sqlForAddingNewPost =`INSERT INTO posts (postId, postedUserId, postedTime, postText, postImageUrl) VALUES (NULL, ?, ?, ?,?)`;
-let query = db.query(sqlForAddingNewPost,[postedUserId,postedTime,postText, postImageUrl],(err,result) =>{
+let query = db.query(sqlForAddingNewPost,[postedUserId,formattedTime ,postText, postImageUrl],(err,result) =>{
 if(err){
 console.log("Error while adding a new post in the databese",err);
 throw err;
