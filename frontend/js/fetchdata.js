@@ -56,7 +56,7 @@ const showAllPosts = (allPost) => {
                 <div class="post-username-time">
                     <p class="post-user-name">${post.postedUserName}</p>
                     <div class="posted-time">
-                       span>${typeof timeDiffernce !== 'undefined' ? timeDiffernce(post.postedTime) : 'Just now'}</span>
+                       <span>${typeof timeDiffernce !== 'undefined' ? timeDiffernce(post.postedTime) : 'Just now'}</span>
                         <span>ago</span>
                     </div>
                 </div>
