@@ -14,7 +14,7 @@ res.send({frist:'munna',age:30}); add
 let db = mysql.createConnection({
   host : process.env.DB_HOST,
   user : process.env.DB_USER,
-  password :process.env. DB_PASS,
+  password :process.env.DB_PASS,
   database :process.env.DB_NAME,
       port: DB_PORT,
        ssl: {
